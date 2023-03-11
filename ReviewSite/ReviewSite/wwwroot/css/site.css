@@ -1,0 +1,32 @@
+
+
+html {
+    font-size: 14px;
+    
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: inherit;
+  height: 500px;
+}
+
+
+
+.logo {
+    position: inherit;
+    height: 500px;
+    padding-top: 50px;
+    opacity: 75%;
+}
+.bottomSection{
+    text-align: center;
+    padding-top: 15px;
+    font-family:Verdana;
+    font-size: 10px;
+}

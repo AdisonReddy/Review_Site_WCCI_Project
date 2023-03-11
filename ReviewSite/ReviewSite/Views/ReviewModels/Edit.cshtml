@@ -1,0 +1,54 @@
+﻿@model ReviewSite.Models.ReviewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<h4>Review</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="ReviewerName" class="control-label"></label>
+                <input asp-for="ReviewerName" class="form-control" />
+                <span asp-validation-for="ReviewerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReviewText" class="control-label"></label>
+                <input asp-for="ReviewText" class="form-control" />
+                <span asp-validation-for="ReviewText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewRestaurant" class="control-label"></label>
+                <input asp-for="NewRestaurant" class="form-control" />
+                <span asp-validation-for="NewRestaurant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MonthVisited" class="control-label"></label>
+                <input asp-for="MonthVisited" class="form-control" />
+                <span asp-validation-for="MonthVisited" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearVisited" class="control-label"></label>
+                <input asp-for="YearVisited" class="form-control" />
+                <span asp-validation-for="YearVisited" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div style="border-bottom:groove 1px">
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,53 @@
+﻿@model ReviewSite.Models.ReviewModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h3>Are You Sure You Want To Delete This?</h3>
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReviewerName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReviewerName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReviewText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReviewText)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RestaurantsId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RestaurantsId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MonthVisited)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MonthVisited)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YearVisited)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YearVisited)
+        </dd>
+    </dl>
+    
+    <div style="border-bottom:groove 1px">
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+html {
+    font-size: 14px;
+    
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: inherit;
+  height: 500px;
+}
+
+.bg {
+    background-image: url("https://media.cntraveler.com/photos/5cacaf106c6a90694611589b/master/pass/Nightshade_2019_Frank-Lee_2018-12-14-NightShade-117.jpg");
+    height: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    position: inherit;
+    height: 500px;
+    padding-top: 50px;
+    opacity: 75%;
+}
+.bottomSection{
+    text-align: center;
+    padding-top: 15px;
+    font-family:Verdana;
+}

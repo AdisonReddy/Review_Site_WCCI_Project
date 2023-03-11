@@ -1,0 +1,49 @@
+﻿@model ReviewSite.Models.ReviewModel
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div>
+    <h4>Reviews</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReviewerName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReviewerName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReviewText)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReviewText)
+        </dd>
+        <dt class = "col-sm-2">
+            Restaurant
+        </dt>
+       <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Restaurant)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MonthVisited)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MonthVisited)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YearVisited)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YearVisited)
+        </dd>
+    </dl>
+</div>
+<div style="border-bottom:groove 1px">
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
